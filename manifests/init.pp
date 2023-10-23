@@ -50,8 +50,6 @@ class edac (
   $with_extra_labels          = $edac::params::with_extra_labels
 ) inherits edac::params {
 
-  validate_bool($edac_service_enable, $with_extra_labels)
-
   case $ensure {
     'present': {
       $package_ensure = 'present'
